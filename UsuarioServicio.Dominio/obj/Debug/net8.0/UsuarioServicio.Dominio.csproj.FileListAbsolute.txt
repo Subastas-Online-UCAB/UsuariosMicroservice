@@ -1,0 +1,11 @@
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\bin\Debug\net8.0\UsuarioServicio.Dominio.deps.json
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\bin\Debug\net8.0\UsuarioServicio.Dominio.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\bin\Debug\net8.0\UsuarioServicio.Dominio.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.AssemblyInfoInputs.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.AssemblyInfo.cs
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\refint\UsuarioServicio.Dominio.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\ref\UsuarioServicio.Dominio.dll

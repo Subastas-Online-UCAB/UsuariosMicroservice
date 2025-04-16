@@ -1,0 +1,17 @@
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\bin\Debug\net8.0\UsuarioServicio.Infraestructura.deps.json
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\bin\Debug\net8.0\UsuarioServicio.Infraestructura.runtimeconfig.json
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\bin\Debug\net8.0\UsuarioServicio.Infraestructura.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\bin\Debug\net8.0\UsuarioServicio.Infraestructura.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\bin\Debug\net8.0\UsuarioServicio.Dominio.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\bin\Debug\net8.0\UsuarioServicio.Dominio.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.csproj.AssemblyReference.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.AssemblyInfoInputs.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.AssemblyInfo.cs
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.csproj.CoreCompileInputs.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioS.C31A593B.Up2Date
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\refint\UsuarioServicio.Infraestructura.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.genruntimeconfig.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\ref\UsuarioServicio.Infraestructura.dll

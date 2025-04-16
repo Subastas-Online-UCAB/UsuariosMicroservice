@@ -1,0 +1,17 @@
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Aplicacion.deps.json
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Aplicacion.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Aplicacion.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.csproj.AssemblyReference.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.AssemblyInfoInputs.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.AssemblyInfo.cs
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\refint\UsuarioServicio.Aplicacion.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\ref\UsuarioServicio.Aplicacion.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Dominio.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Infraestructura.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Dominio.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Infraestructura.pdb
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioS.A23E144E.Up2Date

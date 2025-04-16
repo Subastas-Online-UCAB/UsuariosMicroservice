@@ -1,0 +1,759 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\persistencia\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\persistencia\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\services\\keycloakservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\services\\keycloakservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\usuarioservicio.infraestructura.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\usuarioservicio.infraestructura.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.dominio\\usuarioservicio.dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|solutionrelative:usuarioservicio.dominio\\usuarioservicio.dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\usuarioservicio.aplicacion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\usuarioservicio.aplicacion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\controllers\\rolprivilegiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\controllers\\rolprivilegiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\eliminarasignacionprivilegiohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\eliminarasignacionprivilegiohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\command\\eliminarasignacionprivilegiocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\command\\eliminarasignacionprivilegiocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\dtos\\getallrolesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\dtos\\getallrolesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\controllers\\privilegiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\controllers\\privilegiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\deleteprivilegiohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\deleteprivilegiohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\command\\deleteprivilegiocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\command\\deleteprivilegiocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\command\\deleteuserbyemailcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\command\\deleteuserbyemailcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\getallprivilegioshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\getallprivilegioshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.dominio\\entidades\\rolprivilegio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|solutionrelative:usuarioservicio.dominio\\entidades\\rolprivilegio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\persistencia\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\persistencia\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.dominio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|solutionrelative:usuarioservicio.dominio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\getprivilegiosporrolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\getprivilegiosporrolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\dtos\\privilegiodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\dtos\\privilegiodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\queries\\getprivilegiosporrolquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\queries\\getprivilegiosporrolquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\deleterolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\deleterolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\command\\deleterolcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\command\\deleterolcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\crearprivilegiohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\crearprivilegiohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\crearrolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\crearrolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\dtos\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\dtos\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\dtos\\crearroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\dtos\\crearroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\deleteuserbyemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\deleteuserbyemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\usuarioservicio.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\usuarioservicio.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\command\\asignarprivilegiorolcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\command\\asignarprivilegiorolcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\dtos\\asignarprivilegioroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\dtos\\asignarprivilegioroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\servicios\\asignarprivilegiorolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\servicios\\asignarprivilegiorolhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\command\\crearrolcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\command\\crearrolcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\dtos\\crearprivilegiodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\dtos\\crearprivilegiodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.dominio\\entidades\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|solutionrelative:usuarioservicio.dominio\\entidades\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E30D4A9-6775-434D-A7DA-D603A530DA09}|UsuarioServicio.Api\\UsuarioServicio.Api.csproj|solutionrelative:usuarioservicio.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\migrations\\20250409024456_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\migrations\\20250409024456_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.aplicacion\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF26FEA4-8809-42F3-99B2-90B6A9A361DC}|UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj|solutionrelative:usuarioservicio.aplicacion\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.dominio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8872DD2-FDD5-41A5-AC20-E20E8DF3C599}|UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj|solutionrelative:usuarioservicio.dominio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\migrations\\20250410003402_fixrolidnullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\migrations\\20250410003402_fixrolidnullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\migrations\\20250409195051_addroltousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\migrations\\20250409195051_addroltousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|c:\\users\\ejic2\\onedrive\\escritorio\\api prueba\\usuarioservicio\\usuarioservicio.infraestructura\\migrations\\20250409170505_addrolandprivilegio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{841834F7-8EA2-4E58-8BA7-013DC3DE25E7}|UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj|solutionrelative:usuarioservicio.infraestructura\\migrations\\20250409170505_addrolandprivilegio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Program.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Program.cs",
+              "RelativeToolTip": "UsuarioServicio.Api\\Program.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T03:44:52.719Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RolPrivilegioController.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\RolPrivilegioController.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\Controllers\\RolPrivilegioController.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\RolPrivilegioController.cs",
+              "RelativeToolTip": "UsuarioServicio.Api\\Controllers\\RolPrivilegioController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:37:00.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioServicio.Infraestructura.csproj",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\UsuarioServicio.Infraestructura.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T17:08:16.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KeycloakService.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Services\\KeycloakService.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Services\\KeycloakService.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Services\\KeycloakService.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Services\\KeycloakService.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:15:05.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T02:42:55.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Dominio\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "UsuarioServicio.Dominio\\Entidades\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T02:12:06.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RolController.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\RolController.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\Controllers\\RolController.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\RolController.cs",
+              "RelativeToolTip": "UsuarioServicio.Api\\Controllers\\RolController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T16:23:06.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PrivilegioController.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\PrivilegioController.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\Controllers\\PrivilegioController.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\PrivilegioController.cs",
+              "RelativeToolTip": "UsuarioServicio.Api\\Controllers\\PrivilegioController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:22:53.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioServicio.Aplicacion.csproj",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T17:06:29.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioServicio.Dominio.csproj",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj",
+              "RelativeDocumentMoniker": "UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj",
+              "RelativeToolTip": "UsuarioServicio.Dominio\\UsuarioServicio.Dominio.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T17:05:18.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeletePrivilegioHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\DeletePrivilegioHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\DeletePrivilegioHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\DeletePrivilegioHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\DeletePrivilegioHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:30:57.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DeletePrivilegioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\DeletePrivilegioCommand.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Command\\DeletePrivilegioCommand.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\DeletePrivilegioCommand.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Command\\DeletePrivilegioCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:32:37.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EliminarAsignacionPrivilegioHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\EliminarAsignacionPrivilegioHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\EliminarAsignacionPrivilegioHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\EliminarAsignacionPrivilegioHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\EliminarAsignacionPrivilegioHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:58:08.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EliminarAsignacionPrivilegioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\EliminarAsignacionPrivilegioCommand.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Command\\EliminarAsignacionPrivilegioCommand.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\EliminarAsignacionPrivilegioCommand.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Command\\EliminarAsignacionPrivilegioCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:56:54.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DeleteRolHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\DeleteRolHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\DeleteRolHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\DeleteRolHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\DeleteRolHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T23:13:15.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PrivilegioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\PrivilegioDTO.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\DTOs\\PrivilegioDTO.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\PrivilegioDTO.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\DTOs\\PrivilegioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T23:58:47.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetAllRolesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\GetAllRolesQuery.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\DTOs\\GetAllRolesQuery.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\GetAllRolesQuery.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\DTOs\\GetAllRolesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:16:16.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DeleteUserByEmailCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\DeleteUserByEmailCommand.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Command\\DeleteUserByEmailCommand.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\DeleteUserByEmailCommand.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Command\\DeleteUserByEmailCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:25:02.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetAllPrivilegiosHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\GetAllPrivilegiosHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\GetAllPrivilegiosHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\GetAllPrivilegiosHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\GetAllPrivilegiosHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:19:30.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GetPrivilegiosPorRolQuery.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Queries\\GetPrivilegiosPorRolQuery.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Queries\\GetPrivilegiosPorRolQuery.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Queries\\GetPrivilegiosPorRolQuery.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Queries\\GetPrivilegiosPorRolQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T23:59:59.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContext.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Persistencia\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowDQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T02:10:11.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetPrivilegiosPorRolHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\GetPrivilegiosPorRolHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\GetPrivilegiosPorRolHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\GetPrivilegiosPorRolHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\GetPrivilegiosPorRolHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T00:01:21.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RolPrivilegio.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Entidades\\RolPrivilegio.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Dominio\\Entidades\\RolPrivilegio.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Entidades\\RolPrivilegio.cs",
+              "RelativeToolTip": "UsuarioServicio.Dominio\\Entidades\\RolPrivilegio.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T16:38:47.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DeleteUserByEmailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\DeleteUserByEmailHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\DeleteUserByEmailHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\DeleteUserByEmailHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\DeleteUserByEmailHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:26:03.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CrearRolHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\CrearRolHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\CrearRolHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\CrearRolHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\CrearRolHandler.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:50:50.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DeleteRolCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\DeleteRolCommand.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Command\\DeleteRolCommand.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\DeleteRolCommand.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Command\\DeleteRolCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T23:11:55.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CrearPrivilegioHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\CrearPrivilegioHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\CrearPrivilegioHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\CrearPrivilegioHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\CrearPrivilegioHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:02:40.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RolDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\RolDTO.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\DTOs\\RolDTO.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\RolDTO.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\DTOs\\RolDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:17:18.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CrearRolDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\CrearRolDTO.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\DTOs\\CrearRolDTO.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\CrearRolDTO.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\DTOs\\CrearRolDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:13:54.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UsuarioServicio.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\UsuarioServicio.Api.csproj",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\UsuarioServicio.Api.csproj",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\UsuarioServicio.Api.csproj",
+              "RelativeToolTip": "UsuarioServicio.Api\\UsuarioServicio.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-14T19:46:20.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\appsettings.json",
+              "RelativeToolTip": "UsuarioServicio.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-09T03:45:37.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AsignarPrivilegioRolCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\AsignarPrivilegioRolCommand.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Command\\AsignarPrivilegioRolCommand.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\AsignarPrivilegioRolCommand.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Command\\AsignarPrivilegioRolCommand.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:22:50.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "20250410003402_FixRolIdNullable.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250410003402_FixRolIdNullable.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Migrations\\20250410003402_FixRolIdNullable.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250410003402_FixRolIdNullable.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Migrations\\20250410003402_FixRolIdNullable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T00:34:02.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AsignarPrivilegioRolDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\AsignarPrivilegioRolDTO.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\DTOs\\AsignarPrivilegioRolDTO.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\AsignarPrivilegioRolDTO.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\DTOs\\AsignarPrivilegioRolDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:20:00.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AsignarPrivilegioRolHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\AsignarPrivilegioRolHandler.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Servicios\\AsignarPrivilegioRolHandler.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Servicios\\AsignarPrivilegioRolHandler.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Servicios\\AsignarPrivilegioRolHandler.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:24:45.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "20250409195051_AddRolToUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250409195051_AddRolToUsuario.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Migrations\\20250409195051_AddRolToUsuario.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250409195051_AddRolToUsuario.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Migrations\\20250409195051_AddRolToUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:50:51.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CrearRolCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\CrearRolCommand.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Command\\CrearRolCommand.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Command\\CrearRolCommand.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Command\\CrearRolCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:46:11.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CrearPrivilegioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\CrearPrivilegioDTO.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\DTOs\\CrearPrivilegioDTO.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\DTOs\\CrearPrivilegioDTO.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\DTOs\\CrearPrivilegioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:39:15.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20250409170505_AddRolAndPrivilegio.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250409170505_AddRolAndPrivilegio.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Migrations\\20250409170505_AddRolAndPrivilegio.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250409170505_AddRolAndPrivilegio.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Migrations\\20250409170505_AddRolAndPrivilegio.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:05:06.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Entidades\\Rol.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Dominio\\Entidades\\Rol.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Entidades\\Rol.cs",
+              "RelativeToolTip": "UsuarioServicio.Dominio\\Entidades\\Rol.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T16:36:07.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "UsuarioServicio.Api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T04:03:56.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20250409024456_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250409024456_InitialCreate.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Migrations\\20250409024456_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Migrations\\20250409024456_InitialCreate.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Migrations\\20250409024456_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T02:44:57.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Class1.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Aplicacion\\Class1.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\Class1.cs",
+              "RelativeToolTip": "UsuarioServicio.Aplicacion\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:53:34.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Class1.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Dominio\\Class1.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Dominio\\Class1.cs",
+              "RelativeToolTip": "UsuarioServicio.Dominio\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:52:16.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Class1.cs",
+              "RelativeDocumentMoniker": "UsuarioServicio.Infraestructura\\Class1.cs",
+              "ToolTip": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Infraestructura\\Class1.cs",
+              "RelativeToolTip": "UsuarioServicio.Infraestructura\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:55:21.91Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
