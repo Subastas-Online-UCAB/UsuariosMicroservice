@@ -15,3 +15,4 @@ C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Ap
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Dominio.pdb
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\bin\Debug\net8.0\UsuarioServicio.Infraestructura.pdb
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioS.A23E144E.Up2Date
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Aplicacion\obj\Debug\net8.0\UsuarioServicio.Aplicacion.sourcelink.json

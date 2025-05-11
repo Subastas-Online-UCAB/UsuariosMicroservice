@@ -1,44 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Queries;
-using UsuarioServicio.Infraestructura.Persistencia;
+using UsuarioServicio.Infraestructura.MongoDB;
+using MongoDB.Driver;
+using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using UsuarioServicio.Dominio.Entidades;
 
-namespace UsuarioServicio.Aplicacion.Services
+namespace UsuarioServicio.Aplicacion.Handlers
 {
     public class GetUserByEmailHandler : IRequestHandler<GetUserByEmailQuery, UserDto>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly MongoDbContext _mongoDbContext;
 
-        public GetUserByEmailHandler(ApplicationDbContext context)
+        public GetUserByEmailHandler(MongoDbContext mongoDbContext)
         {
-            _context = context;
+            _mongoDbContext = mongoDbContext;
         }
 
         public async Task<UserDto> Handle(GetUserByEmailQuery request, CancellationToken cancellationToken)
         {
-            var user = await _context.Usuarios
-                .Where(u => u.Email == request.Email)
-                .Select(u => new UserDto 
-                {
-                    Id = u.Id,
-                    Nombre = u.Nombre,
-                    Apellido = u.Apellido,
-                    Email = u.Email,
-                    FechaCreacion = u.FechaCreacion,
-                    Telefono = u.Telefono,
-                    Direccion = u.Direccion,
-                    Rol = u.Rol
-                })
+            var usuarioMongo = await _mongoDbContext.Usuarios
+                .Find(u => u.Email == request.Email)
                 .FirstOrDefaultAsync(cancellationToken);
 
-            return user;
+            if (usuarioMongo == null)
+                return null;
+
+            var rolesMongo = await _mongoDbContext.Roles
+                .Find(_ => true)
+                .ToListAsync(cancellationToken);
+
+            var rolMongo = rolesMongo.FirstOrDefault(r => r.Id.ToString() == usuarioMongo.RolId);
+
+            var rol = rolMongo != null
+                ? new Rol
+                {
+                    Id = Guid.Parse(rolMongo.Id),
+                    Nombre = rolMongo.Nombre,
+                    Descripcion = rolMongo.Descripcion
+                }
+                : null;
+
+            return new UserDto
+            {
+                Id = usuarioMongo.UsuarioId,
+                Nombre = usuarioMongo.Nombre,
+                Apellido = usuarioMongo.Apellido,
+                Email = usuarioMongo.Email,
+                FechaCreacion = usuarioMongo.FechaCreacion,
+                Telefono = usuarioMongo.Telefono,
+                Direccion = usuarioMongo.Direccion,
+                Rol = rol
+            };
         }
     }
 }
-

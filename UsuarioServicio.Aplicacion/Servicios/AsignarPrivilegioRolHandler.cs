@@ -8,6 +8,7 @@ namespace UsuarioServicio.Aplicacion.Servicios
 {
     using global::UsuarioServicio.Aplicacion.Command;
     using global::UsuarioServicio.Dominio.Entidades;
+    using global::UsuarioServicio.Dominio.Events;
     using global::UsuarioServicio.Infraestructura.Persistencia;
     using MediatR;
     using Microsoft.EntityFrameworkCore;
@@ -17,10 +18,12 @@ namespace UsuarioServicio.Aplicacion.Servicios
         public class AsignarPrivilegioRolHandler : IRequestHandler<AsignarPrivilegioRolCommand, Unit>
         {
             private readonly ApplicationDbContext _context;
+            private readonly IRabbitEventPublisher _rabbitPublisher;
 
-            public AsignarPrivilegioRolHandler(ApplicationDbContext context)
+            public AsignarPrivilegioRolHandler(ApplicationDbContext context, IRabbitEventPublisher rabbitPublisher)
             {
                 _context = context;
+                _rabbitPublisher = rabbitPublisher;
             }
 
             public async Task<Unit> Handle(AsignarPrivilegioRolCommand request, CancellationToken cancellationToken)
@@ -54,6 +57,13 @@ namespace UsuarioServicio.Aplicacion.Servicios
 
                 _context.RolPrivilegios.Add(rolPrivilegio);
                 await _context.SaveChangesAsync(cancellationToken);
+
+                // 🔄 Publica el evento a RabbitMQ
+                await _rabbitPublisher.PublicarPrivilegioAsignadoAsync(new PrivilegioAsignadoEvent
+                {
+                    RolId = request.Asignacion.RolId,
+                    PrivilegioId = request.Asignacion.PrivilegioId
+                }, cancellationToken);
 
                 return Unit.Value;
             }

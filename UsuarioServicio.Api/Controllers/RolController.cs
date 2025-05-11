@@ -8,7 +8,6 @@ using UsuarioServicio.Aplicacion.Queries;
 namespace UsuarioServicio.Api.Controllers
 {
     [ApiController]
-    [Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     public class RolController : ControllerBase
     {

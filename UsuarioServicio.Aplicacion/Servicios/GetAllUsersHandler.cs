@@ -5,39 +5,63 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using UsuarioServicio.Aplicacion.Queries;
-using UsuarioServicio.Infraestructura.Persistencia;
-using Microsoft.EntityFrameworkCore;
+using UsuarioServicio.Aplicacion.DTOs;
+using UsuarioServicio.Infraestructura.MongoDB;
+using UsuarioServicio.Infraestructura.MongoDB.Documentos;
+using MongoDB.Driver;
+using UsuarioServicio.Dominio.DTOs;
+using UsuarioServicio.Dominio.Entidades;
+using Keycloak.Net.Models.Roles;
+using Keycloak.Net.Models.RealmsAdmin;
+using System.Data;
 
-namespace UsuarioServicio.Aplicacion.Services
+namespace UsuarioServicio.Aplicacion.Handlers
 {
     public class GetAllUsersHandler : IRequestHandler<GetAllUsersQuery, List<UserDto>>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly MongoDbContext _mongoDbContext;
 
-        public GetAllUsersHandler(ApplicationDbContext context)
+        public GetAllUsersHandler(MongoDbContext mongoDbContext)
         {
-            _context = context;
+            _mongoDbContext = mongoDbContext;
         }
 
         public async Task<List<UserDto>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
         {
-            var users = await _context.Usuarios
-                .Select(u => new UserDto
+            var usuariosMongo = await _mongoDbContext.Usuarios.Find(_ => true).ToListAsync(cancellationToken);
+            var rolesMongo = await _mongoDbContext.Roles.Find(_ => true).ToListAsync(cancellationToken);
+
+            var usuarios = usuariosMongo.Select(u =>
+            {
+                var rol = rolesMongo.FirstOrDefault(r => r.Id.ToString() == u.RolId?.Trim());
+
+
+                Console.WriteLine($"Buscando RolId: {u.RolId}");
+                foreach (var r in rolesMongo)
                 {
-                    Id = u.Id,
+                    Console.WriteLine($"Rol.Id: {r.Id} - {r.Id.ToString()}");
+                }
+
+                return new UserDto
+                {
+                    Id = u.UsuarioId,
                     Nombre = u.Nombre,
                     Apellido = u.Apellido,
                     Email = u.Email,
                     FechaCreacion = u.FechaCreacion,
                     Telefono = u.Telefono,
                     Direccion = u.Direccion,
-                    Rol = u.Rol
-                })
-                .ToListAsync(cancellationToken);
+                    Rol = rol != null ? new Rol
+                    {
+                        Id = Guid.Parse(rol.Id),
+                        Nombre = rol.Nombre,
+                        Descripcion = rol.Descripcion
+                    } : null
+                };
+            }).ToList();
 
-            return users;
+            return usuarios; // ✅ Este return es el que faltaba afuera
         }
     }
 }

@@ -15,11 +15,13 @@ namespace UsuarioServicio.Aplicacion.Commands
     {
         private readonly ApplicationDbContext _context;
         private readonly KeycloakService _keycloakService;
+        private readonly IRabbitEventPublisher _eventPublisher;
 
-        public DeleteUserByEmailHandler(ApplicationDbContext context, KeycloakService keycloakService)
+        public DeleteUserByEmailHandler(ApplicationDbContext context, KeycloakService keycloakService, IRabbitEventPublisher eventPublisher)
         {
             _context = context;
             _keycloakService = keycloakService;
+            _eventPublisher = eventPublisher;
         }
 
         public async Task<string> Handle(DeleteUserByEmailCommand request, CancellationToken cancellationToken)
@@ -41,6 +43,9 @@ namespace UsuarioServicio.Aplicacion.Commands
             // 3. Elimina usuario en base de datos
             _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync(cancellationToken);
+
+            // 4. Publica evento para eliminar en Mongo
+            await _eventPublisher.PublicarUsuarioEliminadoAsync(usuario.Id, usuario.Email, cancellationToken);
 
             return $"Usuario con correo {request.Email} eliminado exitosamente.";
         }

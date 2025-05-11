@@ -9,3 +9,5 @@ C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Do
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\refint\UsuarioServicio.Dominio.dll
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.pdb
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\ref\UsuarioServicio.Dominio.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.sourcelink.json
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Dominio\obj\Debug\net8.0\UsuarioServicio.Dominio.csproj.AssemblyReference.cache

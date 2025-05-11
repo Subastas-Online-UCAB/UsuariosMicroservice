@@ -15,3 +15,4 @@ C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.In
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.pdb
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.genruntimeconfig.cache
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\ref\UsuarioServicio.Infraestructura.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Infraestructura\obj\Debug\net8.0\UsuarioServicio.Infraestructura.sourcelink.json
