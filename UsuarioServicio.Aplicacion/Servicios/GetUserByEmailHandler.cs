@@ -1,44 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using MediatR;
+using System.Threading;
 using System.Threading.Tasks;
-
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Queries;
-using UsuarioServicio.Infraestructura.Persistencia;
+using UsuarioServicio.Dominio.DTOs;
+using UsuarioServicio.Dominio.Interfaces;
 
-namespace UsuarioServicio.Aplicacion.Services
+namespace UsuarioServicio.Aplicacion.Servicios
 {
-    public class GetUserByEmailHandler : IRequestHandler<GetUserByEmailQuery, UserDto>
+    public class GetUserByEmailHandler : IRequestHandler<GetUserByEmailQuery, UsuarioMongoDto>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUsuarioMongoRepository _repository;
 
-        public GetUserByEmailHandler(ApplicationDbContext context)
+        public GetUserByEmailHandler(IUsuarioMongoRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
-        public async Task<UserDto> Handle(GetUserByEmailQuery request, CancellationToken cancellationToken)
+        public async Task<UsuarioMongoDto> Handle(GetUserByEmailQuery request, CancellationToken cancellationToken)
         {
-            var user = await _context.Usuarios
-                .Where(u => u.Email == request.Email)
-                .Select(u => new UserDto 
-                {
-                    Id = u.Id,
-                    Nombre = u.Nombre,
-                    Apellido = u.Apellido,
-                    Email = u.Email,
-                    FechaCreacion = u.FechaCreacion,
-                    Telefono = u.Telefono,
-                    Direccion = u.Direccion,
-                    Rol = u.Rol
-                })
-                .FirstOrDefaultAsync(cancellationToken);
-
-            return user;
+            return await _repository.ObtenerPorEmailAsync(request.Email, cancellationToken);
         }
     }
-}
 
+}

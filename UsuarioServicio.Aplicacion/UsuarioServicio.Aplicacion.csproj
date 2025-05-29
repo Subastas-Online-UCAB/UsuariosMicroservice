@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UsuarioServicio.Dominio\UsuarioServicio.Dominio.csproj" />
-	 <ProjectReference Include="..\UsuarioServicio.Infraestructura\UsuarioServicio.Infraestructura.csproj" />
+	<ProjectReference Include="..\UsuarioServicio.Infraestructura\UsuarioServicio.Infraestructura.csproj" />
   </ItemGroup>
 
 </Project>

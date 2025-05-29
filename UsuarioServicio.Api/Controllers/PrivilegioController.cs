@@ -2,14 +2,12 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UsuarioServicio.Aplicacion.Command;
-using UsuarioServicio.Aplicacion.Commands;
 using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Servicios;
 
 namespace UsuarioServicio.Api.Controllers
 {
     [ApiController]
-    [Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     public class PrivilegioController : ControllerBase
     {

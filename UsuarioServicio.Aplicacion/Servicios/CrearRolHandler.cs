@@ -38,7 +38,7 @@ namespace UsuarioServicio.Aplicacion.Servicios
 
             if (rolExistente)
             {
-                throw new Exception("Ya existe un rol con ese nombre.");
+                throw new Exception("Ya existe un rol con ese nombre.");  
             }
 
             // ✅ Primero crea el rol en Keycloak

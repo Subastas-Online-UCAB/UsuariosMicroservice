@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using UsuarioServicio.Aplicacion.Command;
 using UsuarioServicio.Infraestructura.Persistencia;
-using UsuarioServicio.Aplicacion.Commands;
 
 namespace UsuarioServicio.Aplicacion.Servicios
 {

@@ -14,10 +14,12 @@ namespace UsuarioServicio.Aplicacion.Servicios
     public class EliminarAsignacionPrivilegioHandler : IRequestHandler<EliminarAsignacionPrivilegioCommand, bool>
     {
         private readonly ApplicationDbContext _context;
+        private readonly IRabbitEventPublisher _eventPublisher;
 
-        public EliminarAsignacionPrivilegioHandler(ApplicationDbContext context)
+        public EliminarAsignacionPrivilegioHandler(ApplicationDbContext context, IRabbitEventPublisher eventPublisher)
         {
             _context = context;
+            _eventPublisher = eventPublisher;
         }
 
         public async Task<bool> Handle(EliminarAsignacionPrivilegioCommand request, CancellationToken cancellationToken)
@@ -30,6 +32,13 @@ namespace UsuarioServicio.Aplicacion.Servicios
 
             _context.RolPrivilegios.Remove(asignacion);
             await _context.SaveChangesAsync(cancellationToken);
+
+            // Emitir evento
+            await _eventPublisher.PublicarPrivilegioEliminadoAsync(
+                request.RolId.ToString(),
+                request.PrivilegioId.ToString(),
+                cancellationToken
+            );
 
             return true;
         }

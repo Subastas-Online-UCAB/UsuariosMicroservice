@@ -1,43 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
 using UsuarioServicio.Aplicacion.Queries;
-using UsuarioServicio.Infraestructura.Persistencia;
-using Microsoft.EntityFrameworkCore;
+using UsuarioServicio.Dominio.DTOs;
+using UsuarioServicio.Dominio.Interfaces;
 
-namespace UsuarioServicio.Aplicacion.Services
+namespace UsuarioServicio.Aplicacion.Servicios
 {
-    public class GetAllUsersHandler : IRequestHandler<GetAllUsersQuery, List<UserDto>>
+    public class GetAllUsersHandler : IRequestHandler<GetAllUsersQuery, List<UsuarioMongoDto>>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUsuarioMongoRepository _repository;
 
-        public GetAllUsersHandler(ApplicationDbContext context)
+        public GetAllUsersHandler(IUsuarioMongoRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
-        public async Task<List<UserDto>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
+        public async Task<List<UsuarioMongoDto>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
         {
-            var users = await _context.Usuarios
-                .Select(u => new UserDto
-                {
-                    Id = u.Id,
-                    Nombre = u.Nombre,
-                    Apellido = u.Apellido,
-                    Email = u.Email,
-                    FechaCreacion = u.FechaCreacion,
-                    Telefono = u.Telefono,
-                    Direccion = u.Direccion,
-                    Rol = u.Rol
-                })
-                .ToListAsync(cancellationToken);
-
-            return users;
+            var usuarios = await _repository.ObtenerTodosAsync(cancellationToken);
+            return usuarios;
         }
     }
 }

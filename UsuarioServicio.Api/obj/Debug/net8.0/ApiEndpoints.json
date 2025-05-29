@@ -181,6 +181,22 @@
   },
   {
     "ContainingType": "UsuarioServicio.Api.Controllers.UserController",
+    "Method": "ObtenerHistorial",
+    "RelativePath": "api/User/historial/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioServicio.Api.Controllers.UserController",
     "Method": "GetAllUsers",
     "RelativePath": "api/User/list",
     "HttpMethod": "GET",
@@ -209,7 +225,23 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "UsuarioServicio.Aplicacion.DTOs.RegisterUserCommand",
+        "Type": "UsuarioServicio.Aplicacion.Command.RegisterUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioServicio.Api.Controllers.UserController",
+    "Method": "RegistrarMovimiento",
+    "RelativePath": "api/User/registrar-movimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UsuarioServicio.Aplicacion.Command.RegistrarMovimientoCommand",
         "IsRequired": true
       }
     ],
@@ -241,7 +273,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "UsuarioServicio.Aplicacion.Commands.UpdateUserCommand",
+        "Type": "UsuarioServicio.Aplicacion.Command.UpdateUserCommand",
         "IsRequired": true
       }
     ],

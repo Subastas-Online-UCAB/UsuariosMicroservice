@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using UsuarioServicio.Aplicacion.Command;
-using UsuarioServicio.Aplicacion.Commands;
 using UsuarioServicio.Infraestructura.Persistencia;
 using UsuarioServicio.Infraestructura.Services;
 
-namespace UsuarioServicio.Aplicacion.Handlers
+namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class ModificarRolUsuarioHandler : IRequestHandler<ModificarRolUsuarioCommand, bool>
     {

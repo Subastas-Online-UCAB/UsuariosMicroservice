@@ -22,6 +22,30 @@ namespace UsuarioServicio.Infraestructura.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("UsuarioServicio.Dominio.Entidades.MovimientoUsuario", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Accion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Detalles")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("FechaHora")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MovimientosUsuario");
+                });
+
             modelBuilder.Entity("UsuarioServicio.Dominio.Entidades.Privilegio", b =>
                 {
                     b.Property<Guid>("Id")
