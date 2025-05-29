@@ -15,10 +15,10 @@ namespace UsuarioServicio.Infraestructura.Consumers
 {
     public class UsuarioActualizadoConsumer : IConsumer<UsuarioActualizadoEvent>
     {
-        private readonly MongoDbContext _mongoDbContext;
+        private readonly IMongoDbContext _mongoDbContext;
         private readonly ILogger<UsuarioActualizadoConsumer> _logger;
 
-        public UsuarioActualizadoConsumer(MongoDbContext mongoDbContext, ILogger<UsuarioActualizadoConsumer> logger)
+        public UsuarioActualizadoConsumer(IMongoDbContext mongoDbContext, ILogger<UsuarioActualizadoConsumer> logger)
         {
             _mongoDbContext = mongoDbContext;
             _logger = logger;

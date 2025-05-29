@@ -1,11 +1,10 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using UsuarioServicio.Aplicacion.Commands;
 using UsuarioServicio.Infraestructura.Services;
 using UsuarioServicio.Infraestructura.Persistencia;
 using UsuarioServicio.Aplicacion.Command;
 
-namespace UsuarioServicio.Aplicacion.Handlers
+namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class DeleteRolHandler : IRequestHandler<DeleteRolCommand, bool>
     {

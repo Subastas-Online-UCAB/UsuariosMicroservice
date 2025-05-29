@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Queries;
 using UsuarioServicio.Infraestructura.Persistencia;
 
-namespace UsuarioServicio.Aplicacion.Services
+namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class GetAllRolesHandler : IRequestHandler<GetAllRolesQuery, List<RolDTO>>
     {
@@ -23,7 +17,7 @@ namespace UsuarioServicio.Aplicacion.Services
 
         public async Task<List<RolDTO>> Handle(GetAllRolesQuery request, CancellationToken cancellationToken)
         {
-            var roles = await _context.Roles
+            return await _context.Roles
                 .Select(r => new RolDTO
                 {
                     Id = r.Id,
@@ -31,9 +25,6 @@ namespace UsuarioServicio.Aplicacion.Services
                     Descripcion = r.Descripcion
                 })
                 .ToListAsync(cancellationToken);
-
-            return roles;
         }
     }
 }
-

@@ -21,5 +21,8 @@ namespace UsuarioServicio.Dominio.DTOs
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public Guid RolId { get; set; }
+
+        // Nueva propiedad opcional para enriquecer el resultado
+        public RolMongoDto? Rol { get; set; }
     }
 }

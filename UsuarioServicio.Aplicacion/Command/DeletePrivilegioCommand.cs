@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace UsuarioServicio.Aplicacion.Commands
+namespace UsuarioServicio.Aplicacion.Command
 {
     public record DeletePrivilegioCommand(Guid PrivilegioId) : IRequest<bool>;
 }

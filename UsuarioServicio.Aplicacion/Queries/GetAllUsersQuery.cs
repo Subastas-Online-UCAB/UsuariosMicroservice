@@ -5,17 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
+using UsuarioServicio.Aplicacion.DTOs;
+using UsuarioServicio.Dominio.DTOs;
+using UsuarioServicio.Dominio.Entidades;
 
 namespace UsuarioServicio.Aplicacion.Queries
 {
-    public class GetUserByEmailQuery : IRequest<UserDto>
+    public class GetAllUsersQuery : IRequest<List<UsuarioMongoDto>>
     {
-        public string Email { get; set; }
-
-        public GetUserByEmailQuery(string email)
-        {
-            Email = email;
-        }
     }
+
 }
 

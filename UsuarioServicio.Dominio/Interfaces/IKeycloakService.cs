@@ -19,5 +19,9 @@ namespace UsuarioServicio.Dominio.Interfaces
             string keycloakUserId,
             string rolNombre,
             CancellationToken cancellationToken);
+
+        Task EnviarCorreoVerificacionAsync(string userId, CancellationToken cancellationToken);
+
+        //Task SendResetPasswordEmailAsync(string email, CancellationToken cancellationToken);
     }
 }

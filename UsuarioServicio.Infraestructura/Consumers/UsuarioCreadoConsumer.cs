@@ -1,23 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using MassTransit;
 using UsuarioServicio.Dominio.Events;
-using UsuarioServicio.Dominio.Interfaces;
 using UsuarioServicio.Infraestructura.MongoDB;
 using UsuarioServicio.Infraestructura.MongoDB.Documentos;
+using Microsoft.Extensions.Logging;
 
 namespace UsuarioServicio.Infraestructura.Consumers
 {
     public class UsuarioCreadoConsumer : IConsumer<UsuarioCreadoEvent>
     {
-        private readonly MongoDbContext _context;
+        private readonly IMongoDbContext _context;
+        private readonly ILogger<UsuarioCreadoConsumer> _logger;
 
-        public UsuarioCreadoConsumer(MongoDbContext context)
+        public UsuarioCreadoConsumer(IMongoDbContext context, ILogger<UsuarioCreadoConsumer> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public async Task Consume(ConsumeContext<UsuarioCreadoEvent> context)
@@ -26,10 +25,9 @@ namespace UsuarioServicio.Infraestructura.Consumers
             {
                 var mensaje = context.Message;
 
-                Console.WriteLine(" Evento recibido en el consumer:");
-                Console.WriteLine($" Usuario ID: {mensaje.UsuarioId}");
-                Console.WriteLine($" Nombre: {mensaje.Nombre} {mensaje.Apellido}");
-                Console.WriteLine($" Email: {mensaje.Email}");
+                _logger.LogInformation("📩 Evento recibido: UsuarioCreado");
+                _logger.LogInformation("Usuario ID: {UsuarioId} | Nombre: {Nombre} {Apellido} | Email: {Email}",
+                    mensaje.UsuarioId, mensaje.Nombre, mensaje.Apellido, mensaje.Email);
 
                 var usuarioMongo = new UsuarioMongo
                 {
@@ -40,20 +38,18 @@ namespace UsuarioServicio.Infraestructura.Consumers
                     FechaCreacion = mensaje.FechaCreacion,
                     Telefono = mensaje.Telefono,
                     Direccion = mensaje.Direccion,
-                    RolId = mensaje.RolId.ToString(),
+                    RolId = mensaje.RolId.ToString()
                 };
 
                 await _context.Usuarios.InsertOneAsync(usuarioMongo);
-                Console.WriteLine("✅ Insertado en MongoDB correctamente.");
+
+                _logger.LogInformation("✅ Usuario insertado en MongoDB correctamente: {Email}", mensaje.Email);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("❌ Error en el consumidor:");
-                Console.WriteLine(ex.ToString());
-                throw; // importante: relanza para que MassTransit lo sepa
+                _logger.LogError(ex, "❌ Error al insertar usuario en MongoDB: {Error}", ex.Message);
+                throw; // importante: relanza para que MassTransit lo maneje
             }
         }
     }
-
 }
-

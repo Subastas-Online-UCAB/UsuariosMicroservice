@@ -18,6 +18,8 @@ namespace UsuarioServicio.Infraestructura.Persistencia
         public DbSet<Rol> Roles { get; set; }
         public DbSet<Privilegio> Privilegios { get; set; }
         public DbSet<RolPrivilegio> RolPrivilegios { get; set; }
+        public DbSet<MovimientoUsuario> MovimientosUsuario { get; set; }
+
 
 
         // Esta es la tabla que vamos a crear en la base de datos

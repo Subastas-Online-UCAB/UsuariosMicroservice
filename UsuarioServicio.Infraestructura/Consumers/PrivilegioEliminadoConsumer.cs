@@ -13,9 +13,9 @@ using UsuarioServicio.Infraestructura.MongoDB.Documentos;
 
 public class PrivilegioEliminadoConsumer : IConsumer<PrivilegioEliminadoEvent>
 {
-    private readonly MongoDbContext _mongo;
+    private readonly IMongoDbContext _mongo;
 
-    public PrivilegioEliminadoConsumer(MongoDbContext mongo)
+    public PrivilegioEliminadoConsumer(IMongoDbContext mongo)
     {
         _mongo = mongo;
     }

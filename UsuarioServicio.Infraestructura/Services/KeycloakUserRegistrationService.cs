@@ -46,6 +46,7 @@ namespace UsuarioServicio.Infraestructura.Services
             {
                 username = email,
                 enabled = true,
+                emailVerified = false,
                 email,
                 firstName = nombre,
                 lastName = apellido,
@@ -117,5 +118,25 @@ namespace UsuarioServicio.Infraestructura.Services
             if (!assignResponse.IsSuccessStatusCode)
                 throw new Exception("Error al asignar el rol en Keycloak.");
         }
+
+        private readonly string _realm = "microservicio-usuarios";
+        public async Task EnviarCorreoVerificacionAsync(string userId, CancellationToken cancellationToken)
+        {
+            var accessToken = await ObtenerTokenAdminAsync(cancellationToken);
+
+            var request = new HttpRequestMessage(HttpMethod.Put,
+                $"http://localhost:8081/admin/realms/{_realm}/users/{userId}/send-verify-email");
+
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+            var response = await _httpClient.SendAsync(request, cancellationToken);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                throw new Exception($"No se pudo enviar el correo de verificación: {content}");
+            }
+        }
+
     }
 }

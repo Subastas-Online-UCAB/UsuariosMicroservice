@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using UsuarioServicio.Aplicacion.Command;
+using UsuarioServicio.Dominio.Interfaces;
 using UsuarioServicio.Infraestructura.Persistencia;
 using UsuarioServicio.Infraestructura.Services;
 
-namespace UsuarioServicio.Aplicacion.Commands
+namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class DeleteUserByEmailHandler : IRequestHandler<DeleteUserByEmailCommand, string>
     {
         private readonly ApplicationDbContext _context;
-        private readonly KeycloakService _keycloakService;
+        private readonly IKeycloakAccountService _keycloakService;
         private readonly IRabbitEventPublisher _eventPublisher;
 
-        public DeleteUserByEmailHandler(ApplicationDbContext context, KeycloakService keycloakService, IRabbitEventPublisher eventPublisher)
+        public DeleteUserByEmailHandler(ApplicationDbContext context, IKeycloakAccountService keycloakService, IRabbitEventPublisher eventPublisher)
         {
             _context = context;
             _keycloakService = keycloakService;

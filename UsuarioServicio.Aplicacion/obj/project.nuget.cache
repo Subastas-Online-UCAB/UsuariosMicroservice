@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ieYy600cBIg=",
+  "dgSpecHash": "ZtLNAoNYZ3w=",
   "success": true,
   "projectFilePath": "C:\\Users\\ejic2\\OneDrive\\Escritorio\\API prueba\\UsuarioServicio\\UsuarioServicio.Aplicacion\\UsuarioServicio.Aplicacion.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,7 @@
     "C:\\Users\\ejic2\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
     "C:\\Users\\ejic2\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\ejic2\\.nuget\\packages\\mongodb.bson\\3.4.0\\mongodb.bson.3.4.0.nupkg.sha512",
-    "C:\\Users\\ejic2\\.nuget\\packages\\mongodb.driver\\3.3.0\\mongodb.driver.3.3.0.nupkg.sha512",
+    "C:\\Users\\ejic2\\.nuget\\packages\\mongodb.driver\\3.4.0\\mongodb.driver.3.4.0.nupkg.sha512",
     "C:\\Users\\ejic2\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\ejic2\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\ejic2\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",

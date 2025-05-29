@@ -12,9 +12,9 @@ namespace UsuarioServicio.Infraestructura.Consumers
 {
     public class PrivilegioAsignadoConsumer : IConsumer<PrivilegioAsignadoEvent>
     {
-        private readonly MongoDbContext _mongo;
+        private readonly IMongoDbContext _mongo;
 
-        public PrivilegioAsignadoConsumer(MongoDbContext mongo)
+        public PrivilegioAsignadoConsumer(IMongoDbContext mongo)
         {
             _mongo = mongo;
         }
@@ -24,7 +24,7 @@ namespace UsuarioServicio.Infraestructura.Consumers
             var doc = new RolPrivilegioMongo
             {
                 RolId = context.Message.RolId.ToString(),
-                PrivilegioId = context.Message.PrivilegioId.ToString(),
+                PrivilegioId = context.Message.PrivilegioId.ToString()
             };
 
             await _mongo.RolesPrivilegios.InsertOneAsync(doc);

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UsuarioServicio.Aplicacion.Command;
-using UsuarioServicio.Aplicacion.Commands;
 using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Servicios;
 

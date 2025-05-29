@@ -2,11 +2,12 @@
 using System.Text;
 using System.Text.Json;
 using MediatR;
+using UsuarioServicio.Aplicacion.Command;
 using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Dominio.Entidades;
 using UsuarioServicio.Dominio.Interfaces;
 
-namespace UsuarioServicio.Aplicacion.Services
+namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Guid>
     {
@@ -45,6 +46,8 @@ namespace UsuarioServicio.Aplicacion.Services
 
             // 4. Asignar rol en Keycloak
             await _keycloakService.AsignarRolAsync(keycloakUserId, rol.Nombre, cancellationToken);
+            await _keycloakService.EnviarCorreoVerificacionAsync(keycloakUserId, cancellationToken);
+
 
             // 5. Crear usuario en base de datos
             var usuario = Usuario.Crear(

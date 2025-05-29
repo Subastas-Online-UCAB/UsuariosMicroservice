@@ -1,25 +1,27 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using UsuarioServicio.Aplicacion.Commands;
+using UsuarioServicio.Aplicacion.Command;
+using UsuarioServicio.Dominio.Interfaces;
 using UsuarioServicio.Infraestructura.Persistencia;
 using UsuarioServicio.Infraestructura.Services;
 using UsuarioServicio.Infraestructura.Eventos;
 
 
-namespace UsuarioServicio.Aplicacion.Handlers
+namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, bool>
     {
         private readonly ApplicationDbContext _context;
-        private readonly KeycloakService _keycloakService;
+        private readonly IKeycloakAccountService _keycloakService;
         private readonly IRabbitEventPublisher _rabbitPublisher;
 
-        public UpdateUserHandler(ApplicationDbContext context, KeycloakService keycloakService, IRabbitEventPublisher rabbitPublisher)
+        public UpdateUserHandler(ApplicationDbContext context, IKeycloakAccountService keycloakService, IRabbitEventPublisher rabbitPublisher)
         {
             _context = context;
             _keycloakService = keycloakService;
             _rabbitPublisher = rabbitPublisher;
         }
+
 
         public async Task<bool> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {

@@ -72,6 +72,10 @@ namespace UsuarioServicio.Infraestructura.Eventos
             await _publishEndpoint.Publish(evento, cancellationToken);
         }
 
+        public async Task PublicarEventoAsync<T>(T evento, CancellationToken cancellationToken)
+        {
+            await _publishEndpoint.Publish(evento, cancellationToken);
+        }
 
 
     }

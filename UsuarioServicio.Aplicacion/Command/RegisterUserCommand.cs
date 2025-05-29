@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using MediatR;
 
-namespace UsuarioServicio.Aplicacion.DTOs
+namespace UsuarioServicio.Aplicacion.Command
 {
     public class RegisterUserCommand : IRequest<Guid>
     {

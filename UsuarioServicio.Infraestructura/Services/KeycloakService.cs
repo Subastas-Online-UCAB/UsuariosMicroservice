@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using Keycloak.Net.Models.RealmsAdmin;
+using UsuarioServicio.Dominio.Interfaces;
 
 namespace UsuarioServicio.Infraestructura.Services
 {
-    public class KeycloakService
+    public class KeycloakService : IKeycloakAccountService
     {
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl = "http://localhost:8081"; // o la URL de tu Keycloak
         private readonly string _realm = "microservicio-usuarios";
-        public KeycloakService()
+        public KeycloakService(HttpClient httpClient)
         {
-            _httpClient = new HttpClient();
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
 
         public async Task<string> GetAdminToken(CancellationToken cancellationToken)
@@ -82,25 +83,6 @@ namespace UsuarioServicio.Infraestructura.Services
             response.EnsureSuccessStatusCode();
         }
 
-
-        // 1️⃣ Función privada para obtener el usuario por correo electrónico con CancellationToken
-        private async Task<JsonElement?> GetUserByEmailAsync(string token, string email, CancellationToken cancellationToken)
-        {
-            var request = new HttpRequestMessage(
-                HttpMethod.Get,
-                $"http://localhost:8081/admin/realms/microservicio-usuarios/users?email={email}"
-            );
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-            var response = await _httpClient.SendAsync(request, cancellationToken);
-            if (!response.IsSuccessStatusCode) return null;
-
-            var responseJson = await response.Content.ReadAsStringAsync(cancellationToken);
-            using var doc = JsonDocument.Parse(responseJson);
-
-            var userElement = doc.RootElement.EnumerateArray().FirstOrDefault();
-            return userElement.ValueKind != JsonValueKind.Undefined ? userElement : (JsonElement?)null;
-        }
 
         // 2️⃣ Función pública para actualizar el usuario
         public async Task UpdateUserAsync(string email, string firstName, string lastName, CancellationToken cancellationToken)

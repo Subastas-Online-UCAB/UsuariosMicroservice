@@ -1,19 +1,20 @@
 ﻿using UsuarioServicio.Infraestructura.Persistencia;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using UsuarioServicio.Aplicacion.Services;
 using UsuarioServicio.Infraestructura.Services;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using MassTransit;
+using UsuarioServicio.Aplicacion.Interfaces;
 using UsuarioServicio.Infraestructura.Consumers;
 using UsuarioServicio.Infraestructura.MongoDB;
 using UsuarioServicio.Dominio.Interfaces;
 using UsuarioServicio.Infraestructura.Eventos;
 using UsuarioServicio.Infraestructura.Persistencia.Repositorio;
 using UsuarioServicio.Aplicacion.Servicios;
+using UsuarioServicio.Infraestructura.MongoDB.Repositorios;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // MediatR
 builder.Services.AddMediatR(typeof(RegisterUserHandler).Assembly);
+
 //builder.Services.AddMediatR(typeof(GetAllUsersHandler).Assembly);
 
 
@@ -106,11 +108,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 // MONGODB
 
-builder.Services.AddSingleton<MongoDbContext>(sp =>
+builder.Services.AddSingleton<IMongoDbContext>(sp =>
 {
-    var connectionString = builder.Configuration["MongoSettings:ConnectionString"];
-    var databaseName = builder.Configuration["MongoSettings:Database"];
-    return new MongoDbContext(connectionString, databaseName);
+    var config = sp.GetRequiredService<IConfiguration>();
+    var connectionString = config["MongoSettings:ConnectionString"];
+    var dbName = config["MongoSettings:Database"];
+
+
+    return new MongoDbContext(connectionString, dbName);
 });
 
 
@@ -122,7 +127,9 @@ builder.Services.AddMassTransit(x =>
     x.AddConsumer<UsuarioActualizadoConsumer>();
     x.AddConsumer<UsuarioEliminadoConsumer>();
     x.AddConsumer<PrivilegioAsignadoConsumer>();
-    x.AddConsumer<PrivilegioEliminadoConsumer>(); 
+    x.AddConsumer<PrivilegioEliminadoConsumer>();
+    x.AddConsumer<MovimientoRegistradoConsumer>();
+
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -152,9 +159,13 @@ builder.Services.AddMassTransit(x =>
         {
             e.ConfigureConsumer<PrivilegioEliminadoConsumer>(context);
         });
+
+        cfg.ReceiveEndpoint("movimiento-registrado-queue", e =>
+        {
+            e.ConfigureConsumer<MovimientoRegistradoConsumer>(context);
+        });
     });
 });
-
 
 
 
@@ -163,9 +174,15 @@ builder.Services.AddMassTransit(x =>
 
 // Repositorios
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IUsuarioMongoRepository, UsuarioMongoRepository>();
+builder.Services.AddScoped<IHistorialMovimientoRepository, HistorialMongoRepository>();
+
+
 
 // Keycloak
 builder.Services.AddHttpClient<IKeycloakService, KeycloakUserRegistrationService>();
+
+builder.Services.AddHttpClient<IKeycloakAccountService, KeycloakService>();
 
 // RabbitMQ publisher
 builder.Services.AddScoped<IRabbitEventPublisher, RabbitEventPublisher>();

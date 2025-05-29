@@ -9,7 +9,8 @@ using UsuarioServicio.Infraestructura.MongoDB.Documentos;
 
 namespace UsuarioServicio.Infraestructura.MongoDB
 {
-    public class MongoDbContext
+    public class MongoDbContext : IMongoDbContext
+
     {
         private readonly IMongoDatabase _database;
 
@@ -31,6 +32,15 @@ namespace UsuarioServicio.Infraestructura.MongoDB
 
 
         public IMongoDatabase Database => _database;
+
+        public IMongoCollection<T> GetCollection<T>(string nombreColeccion)
+        {
+            return Database.GetCollection<T>(nombreColeccion);
+        }
+
+        public IMongoCollection<MovimientoUsuarioMongo> Movimientos =>
+            _database.GetCollection<MovimientoUsuarioMongo>("Movimientos");
+
 
     }
 }

@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using UsuarioServicio.Aplicacion.DTOs;
-using UsuarioServicio.Aplicacion.Services;
 using UsuarioServicio.Aplicacion.Queries;
-using UsuarioServicio.Aplicacion.Commands;
 using UsuarioServicio.Infraestructura.Services;
 using Microsoft.AspNetCore.Authorization;
+using UsuarioServicio.Aplicacion.Command;
+using UsuarioServicio.Dominio.Interfaces;
+using UsuarioServicio.Aplicacion.DTOs.Reponses;
 
 namespace UsuarioServicio.Api.Controllers
 {
@@ -15,10 +16,10 @@ namespace UsuarioServicio.Api.Controllers
     {
         private readonly IMediator _mediator;
 
-        private readonly KeycloakService _keycloakService;
+        private readonly IKeycloakAccountService _keycloakService;
 
 
-        public UserController(IMediator mediator, KeycloakService keycloakService)
+        public UserController(IMediator mediator, IKeycloakAccountService keycloakService)
         {
             _mediator = mediator;
              _keycloakService = keycloakService;
@@ -28,7 +29,11 @@ namespace UsuarioServicio.Api.Controllers
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserCommand command)
         {
             var userId = await _mediator.Send(command);
-            return Ok(new { Id = userId, Message = "User registered successfully!" });
+            return Ok(new RegisterUserResponse
+            {
+                Id = userId,
+                Message = "User registered successfully!"
+            });
         }
 
         [HttpGet("ping")]
@@ -66,7 +71,7 @@ namespace UsuarioServicio.Api.Controllers
         public async Task<IActionResult> UpdateUser([FromBody] UpdateUserCommand command)
         {
             await _mediator.Send(command);
-            return Ok(new { message = "Usuario actualizado correctamente." });
+            return Ok(new MessageResponse("Usuario actualizado correctamente."));
         }
 
         [HttpPost("reset-password")]
@@ -74,6 +79,21 @@ namespace UsuarioServicio.Api.Controllers
         {
             await _keycloakService.SendResetPasswordEmailAsync(email, CancellationToken.None);
             return Ok("Password reset email sent");
+        }
+
+
+        [HttpGet("historial/{email}")]
+        public async Task<IActionResult> ObtenerHistorial(string email)
+        {
+            var historial = await _mediator.Send(new GetHistorialPorEmailQuery(email));
+            return Ok(historial);
+        }
+
+        [HttpPost("registrar-movimiento")]
+        public async Task<IActionResult> RegistrarMovimiento([FromBody] RegistrarMovimientoCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
 
