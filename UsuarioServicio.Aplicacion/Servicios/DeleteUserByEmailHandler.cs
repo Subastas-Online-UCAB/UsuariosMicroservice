@@ -1,53 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
 using UsuarioServicio.Aplicacion.Command;
+using UsuarioServicio.Dominio.Entidades;
+using UsuarioServicio.Dominio.Excepciones;
 using UsuarioServicio.Dominio.Interfaces;
-using UsuarioServicio.Infraestructura.Persistencia;
-using UsuarioServicio.Infraestructura.Services;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class DeleteUserByEmailHandler : IRequestHandler<DeleteUserByEmailCommand, string>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUsuarioMongoRepository _mongoReader;
+        private readonly IUsuarioRepository _usuarioRepository;
         private readonly IKeycloakAccountService _keycloakService;
         private readonly IRabbitEventPublisher _eventPublisher;
 
-        public DeleteUserByEmailHandler(ApplicationDbContext context, IKeycloakAccountService keycloakService, IRabbitEventPublisher eventPublisher)
+        public DeleteUserByEmailHandler(
+            IUsuarioMongoRepository mongoReader,
+            IUsuarioRepository usuarioRepository,
+            IKeycloakAccountService keycloakService,
+            IRabbitEventPublisher eventPublisher)
         {
-            _context = context;
+            _mongoReader = mongoReader;
+            _usuarioRepository = usuarioRepository;
             _keycloakService = keycloakService;
             _eventPublisher = eventPublisher;
         }
 
         public async Task<string> Handle(DeleteUserByEmailCommand request, CancellationToken cancellationToken)
         {
-            // 1. Verifica existencia en base de datos
-            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == request.Email, cancellationToken);
-            if (usuario == null)
-            {
-                throw new Exception($"No se encontró un usuario con el correo: {request.Email}");
-            }
+            // 1. Verificar si existe en Mongo
+            var usuarioDto = await _mongoReader.ObtenerPorEmailAsync(request.Email, cancellationToken);
+            if (usuarioDto == null)
+                throw new UsuarioNoEncontradoException($"No se encontró un usuario con el correo: {request.Email}");
 
-            // 2. Elimina usuario en Keycloak
+            // 2. Buscar en PostgreSQL para que EF pueda eliminarlo
+            var usuarioPostgres = await _usuarioRepository.ObtenerPorIdAsync(usuarioDto.Id, cancellationToken);
+            if (usuarioPostgres == null)
+                throw new UsuarioNoEncontradoEnPostgresException(usuarioDto.Id);
+
+            // 3. Eliminar en Keycloak si existe
             var userId = await _keycloakService.GetUserIdByEmail(request.Email, cancellationToken);
             if (userId != null)
-            {
                 await _keycloakService.DeleteUser(userId, cancellationToken);
-            }
 
-            // 3. Elimina usuario en base de datos
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync(cancellationToken);
+            // 4. Eliminar desde PostgreSQL
+            await _usuarioRepository.EliminarAsync(usuarioPostgres, cancellationToken);
 
-            // 4. Publica evento para eliminar en Mongo
-            await _eventPublisher.PublicarUsuarioEliminadoAsync(usuario.Id, usuario.Email, cancellationToken);
+            // 5. Publicar evento
+            await _eventPublisher.PublicarUsuarioEliminadoAsync(usuarioPostgres.Id, request.Email, cancellationToken);
 
             return $"Usuario con correo {request.Email} eliminado exitosamente.";
         }

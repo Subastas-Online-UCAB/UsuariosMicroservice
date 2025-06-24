@@ -34,5 +34,29 @@ namespace UsuarioServicio.Infraestructura.Persistencia.Repositorio
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync(cancellationToken);
         }
+
+        public async Task EliminarAsync(Usuario usuario, CancellationToken cancellationToken)
+        {
+            _context.Usuarios.Remove(usuario);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task<Usuario?> ObtenerPorIdAsync(Guid id, CancellationToken cancellationToken)
+        {
+            return await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
+        }
+
+        public async Task<Usuario?> ObtenerPorEmailAsync(string email, CancellationToken cancellationToken)
+        {
+            return await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Email == email, cancellationToken);
+        }
+
+        public async Task ActualizarAsync(Usuario usuario, CancellationToken cancellationToken)
+        {
+            _context.Usuarios.Update(usuario);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
     }
 }

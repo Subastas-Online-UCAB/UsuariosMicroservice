@@ -174,3 +174,5 @@ C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Ap
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Api\bin\Debug\net8.0\SharpCompress.dll
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Api\bin\Debug\net8.0\Snappier.dll
 C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Api\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Api\bin\Debug\net8.0\UsuarioServicio.Api.xml
+C:\Users\ejic2\OneDrive\Escritorio\API prueba\UsuarioServicio\UsuarioServicio.Api\obj\Debug\net8.0\UsuarioServicio.Api.xml

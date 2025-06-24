@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using Moq;
 using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Queries;
 using UsuarioServicio.Aplicacion.Servicios;
 using UsuarioServicio.Dominio.Entidades;
-using UsuarioServicio.Infraestructura.Persistencia;
+using UsuarioServicio.Dominio.Interfaces;
 using Xunit;
 
 public class GetPrivilegiosPorRolHandlerTests
@@ -18,45 +18,18 @@ public class GetPrivilegiosPorRolHandlerTests
         // Arrange
         var rolId = Guid.NewGuid();
 
-        var privilegio1 = new Privilegio
+        var privilegios = new List<Privilegio>
         {
-            Id = Guid.NewGuid(),
-            NombreTabla = "Usuarios",
-            Operacion = "Crear"
+            new Privilegio { Id = Guid.NewGuid(), NombreTabla = "Usuarios", Operacion = "Crear" },
+            new Privilegio { Id = Guid.NewGuid(), NombreTabla = "Roles", Operacion = "Eliminar" }
         };
 
-        var privilegio2 = new Privilegio
-        {
-            Id = Guid.NewGuid(),
-            NombreTabla = "Roles",
-            Operacion = "Eliminar"
-        };
+        var mockRepo = new Mock<IRolPrivilegioRepository>();
+        mockRepo
+            .Setup(r => r.ObtenerPrivilegiosPorRolAsync(rolId, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(privilegios);
 
-        var rolPrivilegio1 = new RolPrivilegio
-        {
-            RolId = rolId,
-            PrivilegioId = privilegio1.Id,
-            Privilegio = privilegio1
-        };
-
-        var rolPrivilegio2 = new RolPrivilegio
-        {
-            RolId = rolId,
-            PrivilegioId = privilegio2.Id,
-            Privilegio = privilegio2
-        };
-
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-            .Options;
-
-        using var context = new ApplicationDbContext(options);
-
-        context.Privilegios.AddRange(privilegio1, privilegio2);
-        context.RolPrivilegios.AddRange(rolPrivilegio1, rolPrivilegio2);
-        await context.SaveChangesAsync();
-
-        var handler = new GetPrivilegiosPorRolHandler(context);
+        var handler = new GetPrivilegiosPorRolHandler(mockRepo.Object);
         var query = new GetPrivilegiosPorRolQuery(rolId);
 
         // Act
@@ -75,13 +48,12 @@ public class GetPrivilegiosPorRolHandlerTests
         // Arrange
         var rolId = Guid.NewGuid();
 
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-            .Options;
+        var mockRepo = new Mock<IRolPrivilegioRepository>();
+        mockRepo
+            .Setup(r => r.ObtenerPrivilegiosPorRolAsync(rolId, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new List<Privilegio>());
 
-        using var context = new ApplicationDbContext(options);
-
-        var handler = new GetPrivilegiosPorRolHandler(context);
+        var handler = new GetPrivilegiosPorRolHandler(mockRepo.Object);
         var query = new GetPrivilegiosPorRolQuery(rolId);
 
         // Act

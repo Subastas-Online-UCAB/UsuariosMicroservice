@@ -1,39 +1,32 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UsuarioServicio.Aplicacion.Command;
-using UsuarioServicio.Infraestructura.Persistencia;
-using Microsoft.EntityFrameworkCore;
-
+using UsuarioServicio.Dominio.Excepciones;
+using UsuarioServicio.Dominio.Interfaces;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class EliminarAsignacionPrivilegioHandler : IRequestHandler<EliminarAsignacionPrivilegioCommand, bool>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IRolPrivilegioRepository _repository;
         private readonly IRabbitEventPublisher _eventPublisher;
 
-        public EliminarAsignacionPrivilegioHandler(ApplicationDbContext context, IRabbitEventPublisher eventPublisher)
+        public EliminarAsignacionPrivilegioHandler(IRolPrivilegioRepository repository, IRabbitEventPublisher eventPublisher)
         {
-            _context = context;
+            _repository = repository;
             _eventPublisher = eventPublisher;
         }
 
         public async Task<bool> Handle(EliminarAsignacionPrivilegioCommand request, CancellationToken cancellationToken)
         {
-            var asignacion = await _context.RolPrivilegios
-                .FirstOrDefaultAsync(rp => rp.RolId == request.RolId && rp.PrivilegioId == request.PrivilegioId, cancellationToken);
+            var asignacion = await _repository.ObtenerAsignacionAsync(request.RolId, request.PrivilegioId, cancellationToken);
 
             if (asignacion == null)
-                throw new Exception("La asignación no existe.");
+                throw new AsignacionNoEncontradaException(request.RolId, request.PrivilegioId);
 
-            _context.RolPrivilegios.Remove(asignacion);
-            await _context.SaveChangesAsync(cancellationToken);
+            await _repository.EliminarAsignacionAsync(asignacion, cancellationToken);
 
-            // Emitir evento
             await _eventPublisher.PublicarPrivilegioEliminadoAsync(
                 request.RolId.ToString(),
                 request.PrivilegioId.ToString(),
@@ -43,5 +36,4 @@ namespace UsuarioServicio.Aplicacion.Servicios
             return true;
         }
     }
-
 }

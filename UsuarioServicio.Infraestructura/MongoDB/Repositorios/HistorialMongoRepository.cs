@@ -1,5 +1,7 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 using UsuarioServicio.Dominio.DTOs;
+using UsuarioServicio.Dominio.Entidades;
 using UsuarioServicio.Dominio.Interfaces;
 using UsuarioServicio.Infraestructura.MongoDB;
 
@@ -37,6 +39,11 @@ namespace UsuarioServicio.Infraestructura.MongoDB.Repositorios
                 Detalles = m.Detalles,
                 FechaHora = m.FechaHora
             }).ToList();
+        }
+
+        public async Task GuardarMovimientoAsync(MovimientoUsuario movimiento, CancellationToken cancellationToken)
+        {
+           
         }
 
     }
