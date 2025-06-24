@@ -1,37 +1,31 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using UsuarioServicio.Aplicacion.Command;
-using UsuarioServicio.Dominio.Entidades;
 using UsuarioServicio.Dominio.Events;
-using UsuarioServicio.Infraestructura.Persistencia;
+using UsuarioServicio.Dominio.Excepciones;
+using UsuarioServicio.Dominio.Interfaces;
 
 namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class RegistrarMovimientoHandler : IRequestHandler<RegistrarMovimientoCommand, string>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUsuarioRepository _usuarioRepository;
         private readonly IRabbitEventPublisher _eventPublisher;
 
-        public RegistrarMovimientoHandler(ApplicationDbContext context, IRabbitEventPublisher eventPublisher)
+        public RegistrarMovimientoHandler(
+            IUsuarioRepository usuarioRepository,
+            IRabbitEventPublisher eventPublisher)
         {
-            _context = context;
+            _usuarioRepository = usuarioRepository;
             _eventPublisher = eventPublisher;
         }
 
         public async Task<string> Handle(RegistrarMovimientoCommand request, CancellationToken cancellationToken)
         {
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.Email == request.Email, cancellationToken);
-
+            var usuario = await _usuarioRepository.ObtenerPorEmailAsync(request.Email, cancellationToken);
             if (usuario == null)
-                throw new Exception("Usuario no encontrado.");
+                throw new UsuarioNoEncontradoException(request.Email);
 
-            var movimiento = new MovimientoUsuario
+            var evento = new MovimientoRegistradoEvent
             {
                 UsuarioId = usuario.Id,
                 Accion = request.Accion,
@@ -39,20 +33,9 @@ namespace UsuarioServicio.Aplicacion.Servicios
                 FechaHora = DateTime.UtcNow
             };
 
-            _context.MovimientosUsuario.Add(movimiento);
-            await _context.SaveChangesAsync(cancellationToken);
+            await _eventPublisher.PublicarEventoAsync(evento, cancellationToken);
 
-            await _eventPublisher.PublicarEventoAsync(
-                new MovimientoRegistradoEvent
-                {
-                    UsuarioId = usuario.Id,
-                    Accion = request.Accion,
-                    Detalles = request.Detalles,
-                    FechaHora = DateTime.UtcNow
-                },
-                cancellationToken);
-
-            return "Movimiento registrado correctamente.";
+            return "Movimiento enviado correctamente para ser procesado.";
         }
     }
 }

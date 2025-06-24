@@ -192,7 +192,9 @@
         "tags": [
           "RolPrivilegio"
         ],
+        "summary": "Asigna un privilegio a un rol específico.",
         "requestBody": {
+          "description": "DTO que contiene los IDs del rol y del privilegio a asignar.",
           "content": {
             "application/json": {
               "schema": {
@@ -213,7 +215,27 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Privilegio asignado correctamente."
+          },
+          "400": {
+            "description": "Datos inválidos.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -223,7 +245,9 @@
         "tags": [
           "RolPrivilegio"
         ],
+        "summary": "Elimina la asignación de un privilegio a un rol.",
         "requestBody": {
+          "description": "Comando que contiene los IDs del rol y del privilegio.",
           "content": {
             "application/json": {
               "schema": {
@@ -244,7 +268,44 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Asignación eliminada correctamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No se encontró la asignación a eliminar.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -254,7 +315,9 @@
         "tags": [
           "User"
         ],
+        "summary": "Registra un nuevo usuario en el sistema.",
         "requestBody": {
+          "description": "Datos del usuario a registrar.",
           "content": {
             "application/json": {
               "schema": {
@@ -274,8 +337,48 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Usuario creado correctamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Datos inválidos o email ya registrado.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -297,9 +400,36 @@
         "tags": [
           "User"
         ],
+        "summary": "Obtiene la lista de todos los usuarios registrados.",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Lista de usuarios obtenida exitosamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -309,6 +439,7 @@
         "tags": [
           "User"
         ],
+        "summary": "Obtiene un usuario por su Email.",
         "parameters": [
           {
             "name": "email",
@@ -320,7 +451,44 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Usuario encontrado.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no existe.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -330,10 +498,12 @@
         "tags": [
           "User"
         ],
+        "summary": "Elimina un usuario por su email.",
         "parameters": [
           {
             "name": "email",
             "in": "path",
+            "description": "Email del usuario a eliminar.",
             "required": true,
             "schema": {
               "type": "string"
@@ -342,7 +512,44 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Usuario eliminado correctamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -352,7 +559,9 @@
         "tags": [
           "User"
         ],
+        "summary": "Actualiza los datos de un usuario por su email.",
         "requestBody": {
+          "description": "Datos actualizados del usuario.",
           "content": {
             "application/json": {
               "schema": {
@@ -373,7 +582,114 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Actualización exitosa.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Actualiza los datos de un usuario por su email.",
+        "requestBody": {
+          "description": "Datos actualizados del usuario.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Actualización exitosa.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -383,7 +699,9 @@
         "tags": [
           "User"
         ],
+        "summary": "Envía un correo de restablecimiento de contraseña al usuario.",
         "requestBody": {
+          "description": "Email del usuario que desea restablecer su contraseña.",
           "content": {
             "application/json": {
               "schema": {
@@ -404,7 +722,44 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Correo de restablecimiento enviado correctamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado en Keycloak.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -414,10 +769,12 @@
         "tags": [
           "User"
         ],
+        "summary": "Obtiene el historial de movimientos registrados de un usuario por su email.",
         "parameters": [
           {
             "name": "email",
             "in": "path",
+            "description": "Email del usuario.",
             "required": true,
             "schema": {
               "type": "string"
@@ -426,7 +783,53 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Historial obtenido exitosamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MovimientoUsuarioMongo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MovimientoUsuarioMongo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MovimientoUsuarioMongo"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado o sin historial.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -436,7 +839,9 @@
         "tags": [
           "User"
         ],
+        "summary": "Registra un nuevo movimiento del usuario (acción realizada).",
         "requestBody": {
+          "description": "Datos del movimiento a registrar.",
           "content": {
             "application/json": {
               "schema": {
@@ -457,7 +862,44 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Movimiento registrado exitosamente.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado en base de datos.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -574,6 +1016,99 @@
         },
         "additionalProperties": false
       },
+      "MovimientoUsuarioMongo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ObjectId"
+          },
+          "usuarioId": {
+            "type": "string",
+            "nullable": true
+          },
+          "accion": {
+            "type": "string",
+            "nullable": true
+          },
+          "detalles": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaHora": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectId": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Privilegio": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombreTabla": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "rolPrivilegios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RolPrivilegio"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
       "RegisterUserCommand": {
         "required": [
           "apellido",
@@ -636,6 +1171,51 @@
         },
         "additionalProperties": false
       },
+      "Rol": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "rolPrivilegios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RolPrivilegio"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RolPrivilegio": {
+        "type": "object",
+        "properties": {
+          "rolId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rol": {
+            "$ref": "#/components/schemas/Rol"
+          },
+          "privilegioId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "privilegio": {
+            "$ref": "#/components/schemas/Privilegio"
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateUserCommand": {
         "type": "object",
         "properties": {
@@ -658,6 +1238,43 @@
           "direccion": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "$ref": "#/components/schemas/Rol"
           }
         },
         "additionalProperties": false

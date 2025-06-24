@@ -16,5 +16,6 @@ namespace UsuarioServicio.Aplicacion.Command
         public string? Telefono { get; set; } 
         public string? Direccion { get; set; }
     }
+
 }
 

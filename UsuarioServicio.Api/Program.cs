@@ -15,6 +15,8 @@ using UsuarioServicio.Infraestructura.Eventos;
 using UsuarioServicio.Infraestructura.Persistencia.Repositorio;
 using UsuarioServicio.Aplicacion.Servicios;
 using UsuarioServicio.Infraestructura.MongoDB.Repositorios;
+using UsuarioServicio.Infraestructura.Repositorio;
+using System.Reflection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -176,6 +178,8 @@ builder.Services.AddMassTransit(x =>
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioMongoRepository, UsuarioMongoRepository>();
 builder.Services.AddScoped<IHistorialMovimientoRepository, HistorialMongoRepository>();
+builder.Services.AddScoped<IRolPrivilegioRepository, RolPrivilegioRepository>();
+
 
 
 
@@ -186,6 +190,14 @@ builder.Services.AddHttpClient<IKeycloakAccountService, KeycloakService>();
 
 // RabbitMQ publisher
 builder.Services.AddScoped<IRabbitEventPublisher, RabbitEventPublisher>();
+
+
+builder.Services.AddSwaggerGen(c =>
+{
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
+
 
 
 

@@ -1,40 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
 using UsuarioServicio.Aplicacion.DTOs;
 using UsuarioServicio.Aplicacion.Queries;
-using UsuarioServicio.Infraestructura.Persistencia;
+using UsuarioServicio.Dominio.Interfaces;
 
 namespace UsuarioServicio.Aplicacion.Servicios
 {
     public class GetPrivilegiosPorRolHandler : IRequestHandler<GetPrivilegiosPorRolQuery, List<PrivilegioDTO>>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IRolPrivilegioRepository _repository;
 
-        public GetPrivilegiosPorRolHandler(ApplicationDbContext context)
+        public GetPrivilegiosPorRolHandler(IRolPrivilegioRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<List<PrivilegioDTO>> Handle(GetPrivilegiosPorRolQuery request, CancellationToken cancellationToken)
         {
-            var privilegios = await _context.RolPrivilegios
-                .Where(rp => rp.RolId == request.RolId)
-                .Include(rp => rp.Privilegio)
-                .Select(rp => new PrivilegioDTO
-                {
-                    Id = rp.Privilegio.Id,
-                    Nombre = rp.Privilegio.NombreTabla,
-                    Descripcion = rp.Privilegio.Operacion
-                })
-                .ToListAsync(cancellationToken);
+            var privilegios = await _repository.ObtenerPrivilegiosPorRolAsync(request.RolId, cancellationToken);
 
-            return privilegios;
+            return privilegios.Select(p => new PrivilegioDTO
+            {
+                Id = p.Id,
+                Nombre = p.NombreTabla,
+                Descripcion = p.Operacion
+            }).ToList();
         }
     }
 }
